@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web制作ポートフォリオ</title>
+  <meta name="description" content="デスクリプション">
+  <link rel="icon" href="favicon.ico" id="favicon">
+  <link rel="apple-touch-icon"  sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="./practice.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container clear">
+      <div class="header-left">
+        <h1 class="header-title">Trade-Air Plane</h1>
+      </div>
+      <div class="header-right">
+        <div class="header-nav clear">
+          <ul>
+            <li class="header-nav-item"><a href="#">弊社のサービス</a></li>
+            <li class="header-nav-item dropdown-toggle"><a href="#">販売中の航空機</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">セスナ</a></li><br>
+                <li><a class="dropdown-item" href="#">ビーチクラフト</a></li><br>
+                <li><a class="dropdown-item" href="#">PA28</a></li><br>
+                <li><a class="dropdown-item" href="#">M20K</a></li><br>
+                <li><a class="dropdown-item" href="#">B787-X</a></li><br>
+              </ul>
+            </li>
+            <li class="header-nav-item"><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        $(function () {
+          $(".dropdown-toggle").click(function () {
+            $(".dropdown-menu").slideToggle();
+          });
+        });
+      </script>
+
+
+  </header>
+
+  <section class="top">
+    <div class="container">
+      <p class="top-title">
+        Air Craft Sales<br>
+        航空機販売
+      </p>
+      <p class="top-subtitle">
+        Aviation Real Estate For Sale<br>
+        Aviation Services
+      </p>
+    </div>
+  </section>
+
+  <section class="about section">
+    <div class="container clear">
+      <h2 class="section-title">弊社のサービス</h2>
+      <div class="about-left">
+        <img src="./img/2番目.png" alt="デイトラとは">
+      </div>
+      <div class="about-right">
+        <p>国内唯一のテキストロンアビエーション社 プロペラ機総販売代理店である当社は、テキストロンアビエーション社セスナ 部品正規販売代理店である関連企業の岡山航空と供に、テキストロンアビエーション社と密接に連携し、国内での機体売買、導入のサポートを行っています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="course section">
+    <div class="container">
+      <h2 class="section-title">販売航空機</h2>
+      <div class="course-wrapper">
+        <div class="course-item">
+          <img src="./img/phPerformance01.png" alt="セスナ">
+          <p>テキストロンアビエーション社セスナ</p>
+        </div>
+
+        <div class="course-item">
+          <img src="./img/phPerformance02.png" alt="ビーチクラフト">
+          <p>テキストロンアビエーション社ビーチクラフト</p>
+        </div>
+
+        <div class="course-item">
+          <img src="./img/phPerformance03.png" alt="ダニア">
+          <p>	ダエア・ソカタ社
+            DAHER-SOCATA </p>
+        </div>
+      </div>
+
+        <div class="course-wrapper">
+          <div class="course-item">
+            <img src="./img/phPerformance04.png" alt="パイパーエアクラフト">
+            <p>	パイパーエアクラフト社
+              PA28  </p>
+          </div>
+  
+          <div class="course-item">
+            <img src="./img/200227-ANA-Boeing-787s-1_resize.png" alt="Boeing">
+            <p>	Boeing社
+              B787-X </p>
+          </div>
+
+
+
+        </div>
+        
+      
+    </div>
+  </section>
+
+  <section class="contact section">
+    <div class="container">
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="contact-message">以下の空欄にメールアドレスを入力してください。</p>
+      <form action="#" method="post">
+        <input type="email" name="email" id="email" placeholder="メールアドレス">
+        <button type="submit" class="btn btn-register">見積もりを依頼を送信する</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <div id="page_top">
+    <button class="page_top" > Page Top</button>
+  </div>
+
+  <script>
+    $(function () {
+      var page_top = $("#page_top");
+      // ボタン非表示
+      page_top.hide();
+      // 80px スクロールしたらボタン表示
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 80) {
+          page_top.fadeIn(300);
+        } else {
+          page_top.fadeOut(300);
+        }
+      });
+      page_top.click(function () {
+        $("body, html").animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+  </script>
+
+  <footer>
+    <div class="container clear">
+      <p class="copyright">Copyright(c) 2022 Trade-Air Plane ALL Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
